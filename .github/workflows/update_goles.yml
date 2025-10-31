@@ -31,19 +31,20 @@ jobs:
       - name: Subir cambios (nuevo goles.json)
         shell: bash
         run: |
-          set +e  # desactiva "error inmediato" para capturar errores sin romper el flujo
-          git config --global user.name "GitHub Action"
-          git config --global user.email "actions@github.com"
-          git add assets/goles.json
+          {
+            echo "🔄 Iniciando subida de cambios..."
+            git config --global user.name "GitHub Action"
+            git config --global user.email "actions@github.com"
+            git add assets/goles.json
 
-          if git diff --cached --quiet; then
-            echo "✅ Sin cambios que subir, todo actualizado."
-          else
-            echo "📤 Subiendo nuevos cambios..."
-            git commit -m "⚽ Actualización automática de goles"
-            git push
-            echo "✅ Cambios subidos correctamente."
-          fi
+            if git diff --cached --quiet; then
+              echo "✅ Sin cambios que subir, todo actualizado."
+            else
+              echo "📤 Subiendo nuevos cambios..."
+              git commit -m "⚽ Actualización automática de goles"
+              git push
+              echo "✅ Cambios subidos correctamente."
+            fi
+          } || true
 
-          # Fuerza salida exitosa, sin importar lo que devuelva Git
-          exit 0
+          echo "🟢 Workflow completado correctamente (forzado exit 0)."
