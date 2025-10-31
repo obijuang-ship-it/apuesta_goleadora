@@ -2,7 +2,7 @@ name: Actualizar goles automáticamente
 
 on:
   schedule:
-    - cron: "0 2 * * *" # Se ejecuta cada día a las 2:00 UTC
+    - cron: "0 9 * * *" # Se ejecuta cada día a las 9:00 UTC (~10:00 hora de España)
   workflow_dispatch: # Permite lanzarlo manualmente
 
 jobs:
