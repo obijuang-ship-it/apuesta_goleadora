@@ -106,3 +106,4 @@ with open("assets/goles.json", "w", encoding="utf-8") as f:
     json.dump(results, f, indent=4, ensure_ascii=False)
 
 print("\n✅ Archivo 'assets/goles.json' actualizado correctamente.")
+results["Última actualización"] = time.strftime("%Y-%m-%d %H:%M:%S")
