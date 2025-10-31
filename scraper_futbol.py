@@ -101,9 +101,10 @@ for name, (pid, slug) in players.items():
         print(f"❌ Error procesando {name}: {e}")
         results[name] = {"partidos": matches, "goles": goals, "asistencias": assists}
 
-# 6️⃣ Guardar archivo
+# 6️⃣ Guardar archivo con marca de tiempo
+results["Última actualización"] = time.strftime("%Y-%m-%d %H:%M:%S")
+
 with open("assets/goles.json", "w", encoding="utf-8") as f:
     json.dump(results, f, indent=4, ensure_ascii=False)
 
 print("\n✅ Archivo 'assets/goles.json' actualizado correctamente.")
-results["Última actualización"] = time.strftime("%Y-%m-%d %H:%M:%S")
