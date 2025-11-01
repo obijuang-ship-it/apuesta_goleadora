@@ -1,0 +1,25 @@
+name: two_and_a_half_strikers
+description: A new Flutter project.
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Añade aquí cualquier otra dependencia si la hubiera
+  cupertino_icons: ^1.0.2
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/goles.json
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins-Regular.ttf
+        - asset: fonts/Poppins-Bold.ttf
+          weight: 700
