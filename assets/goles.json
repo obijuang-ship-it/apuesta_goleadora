@@ -1,18 +1,17 @@
 {
     "Kylian Mbappé": {
-        "partidos": 16,
-        "goles": 17,
+        "partidos": 17,
+        "goles": 19,
         "asistencias": 2
     },
     "Dušan Vlahović": {
-        "partidos": 15,
+        "partidos": 16,
         "goles": 7,
         "asistencias": 1
     },
     "Luis Suárez": {
-        "partidos": 14,
+        "partidos": 15,
         "goles": 8,
         "asistencias": 2
-    },
-    "Última actualización": "2025-10-31 16:55:00"
+    }
 }
